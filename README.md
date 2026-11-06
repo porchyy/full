@@ -4,14 +4,22 @@ A Codex skill for taking a software project from a rough idea to a maintained re
 
 สกิลสำหรับค่อย ๆ ถาม วางแผน แบ่งงาน ลงมือทำ ส่งมอบ และดูแลโปรเจ็กต์ซอฟต์แวร์ต่อ โดยเริ่มเขียนโค้ดหลังจากคุณตรวจแผนและสั่งให้เริ่มทำเท่านั้น
 
-## Install
+## Install in Codex
 
-Copy the [`project-guide`](project-guide/) directory into your Codex skills directory:
+With [GitHub CLI's skill command](https://cli.github.com/manual/gh_skill_install):
 
-- Windows: `%USERPROFILE%\.codex\skills\project-guide\`
-- macOS/Linux: `~/.codex/skills/project-guide/`
+```sh
+gh skill install porchyy/full project-guide --agent codex --scope user
+```
 
-The installed directory must contain `SKILL.md`. Restart or refresh Codex's skill list if needed. The skill has no required plugins, dependencies, or scripts.
+Or ask Codex: `$skill-installer install project-guide from https://github.com/porchyy/full/tree/main/skills/project-guide`.
+
+For a manual install, download the repository ZIP and copy [`skills/project-guide`](skills/project-guide/) to your user skills directory:
+
+- Windows: `%USERPROFILE%\.agents\skills\project-guide\`
+- macOS/Linux: `~/.agents/skills/project-guide/`
+
+Check that the installed directory contains `SKILL.md`, then start a new Codex session and invoke `$project-guide`. The skill needs no plugins, dependencies, or scripts.
 
 ## Use
 
@@ -28,10 +36,11 @@ The skill does not choose a framework, hosting provider, or UI style for every p
 ## Repository layout
 
 ```text
-project-guide/
-  SKILL.md      Skill instructions
-README.md       Installation and usage
-LICENSE         Reuse terms
+skills/
+  project-guide/
+    SKILL.md    Skill instructions
+README.md      Installation and usage
+LICENSE        Reuse terms
 ```
 
 ## License
