@@ -1,9 +1,9 @@
 ---
-name: project-guide
-description: Guide a software project from discovery through UX, architecture, small implementation steps, delivery, and maintenance. Use when the user wants a project planned and built collaboratively; start with questions and a reviewable plan before writing code.
+name: full
+description: Guide a software project from discovery through UX, architecture, small implementation steps, delivery, and maintenance. Use when the user invokes /full, $full, or asks for project planning and guided execution; start with questions and a reviewable plan before writing code.
 ---
 
-# Project Guide
+# Full
 
 Guide the whole project without rushing past decisions. Work in the user's language. Adapt the depth of each phase to the project's size and existing work.
 
@@ -40,7 +40,7 @@ For an existing project, trace the relevant flow and callers before proposing ch
 
 ## 4. Keep durable state
 
-When the intended project workspace exists, reuse its planning or issue documents if they already serve this purpose. Otherwise keep one concise `.project-guide/plan.md` there with the goal, decisions and reasons, deferred questions, ordered slices, current status, and next action. Update it at phase boundaries so another session can continue. Keep secrets and personal data out. If the project location is unknown or does not exist, provide a portable summary in the conversation until one is chosen; do not write project state into an unrelated directory.
+When the intended project workspace exists, reuse its planning or issue documents if they already serve this purpose. Otherwise keep one concise `.full/plan.md` (or `.project-guide/plan.md`) there with the goal, decisions and reasons, deferred questions, ordered slices, current status, and next action. Update it at phase boundaries so another session can continue. Keep secrets and personal data out. If the project location is unknown or does not exist, provide a portable summary in the conversation until one is chosen; do not write project state into an unrelated directory.
 
 ## 5. Build in slices
 
@@ -56,4 +56,3 @@ Before calling the project done, verify the agreed success criteria and provide 
 - Recommend a default when useful, but label it as a recommendation and keep the user's decision visible.
 - Show progress and the next action at each boundary. Do not silently treat a plan as permission to code.
 - A small project may move through phases quickly; a large one may span sessions. The gates remain the same.
-
